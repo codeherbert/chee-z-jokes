@@ -2,12 +2,24 @@ import React, {Component} from "react";
 import axios from "axios";
 
 class JokeList extends Component {
+    static defaultProps = {
+        numJokesToGet: 10
+    };
+    constructor(props) {
+        super(props);
+        this.state = { jokes: [] }
+    };
+
     async componentDidMount() {
-        // load jokes
-        let res = await axios.get("https://icanhazdadjoke.com/", {
-            headers: { Accept : "application/json" }
-        });
-        console.log(res.data.joke);
+        let jokes = [];
+        while(jokes.length < this.props.numJokesToGet) {
+            // load jokes
+            let res = await axios.get("https://icanhazdadjoke.com/", {
+                headers: { Accept : "application/json" }
+            });
+            jokes.push(res.data.joke);
+        }
+        this.setState({ jokes : jokes});
     }
     render() {
         return (
