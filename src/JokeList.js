@@ -47,8 +47,7 @@ class JokeList extends Component {
                 window.localStorage.setItem("jokes", JSON.stringify(this.state.jokes))
             );
         }
-        catch(e) {
-            alert(e);    
+        catch(e) {    
             alert(e + "\n\nUnable to access new jokes. I wish this were a joke too.  :(  \nTry again!");
             this.setState({ loading: false });
         }
