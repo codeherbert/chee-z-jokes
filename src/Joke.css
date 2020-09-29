@@ -1,23 +1,47 @@
 .Joke {
-    display: flex;
+    display: block;
     border-bottom: 2px solid #eeeeee;
-    justify-content: center;
+    padding: .5rem;
     align-items: center;
     font-weight: 400;
     /* padding: 1rem; */
 }
 
+@media only screen and (min-width: 950px) {
+    .Joke {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+}
+
 .Joke-buttons {
     display: flex;
-    margin-right: 1rem;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 100%;
+}
+
+@media only screen and (min-width: 950px) {
+    .Joke-buttons {
+        margin-right: 1rem;
+        width: 25%;
+    }
 }
 
 .Joke-text {
-    width: 75%;
+    width: 100%;
     font-size: 1rem;
+    text-align: center;
+    margin: 7px;
+}
+
+@media only screen and (min-width: 950px) {
+    .Joke-text {
+        width: 75%;
+        text-align: inherit;
+        margin: 0;
+    }
 }
 
 .Joke-votes {
@@ -81,9 +105,19 @@
 
 .Joke-smiley {
     font-size: 2rem;
-    margin-left: auto;
     border-radius: 50%;
-    box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto;
+    width: 48px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+@media only screen and (min-width: 950px) {
+    .Joke-smiley {
+        /* margin-left: auto; */
+        margin: 0 0 0 auto;
+        width: auto;
+        box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .Joke-smiley:hover {

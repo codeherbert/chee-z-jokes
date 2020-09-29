@@ -1,8 +1,8 @@
 .App {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding-top: 15px;
+  height: auto;
   font-family: 'Rubik', sans-serif;
   color: #78909c;
   background: linear-gradient(
@@ -12,4 +12,12 @@
     rgba(240, 98, 146, 1) 50%,
     rgba(240, 98, 146, 1) 100%
   );
+}
+
+@media only screen and (min-width: 950px) {
+  .App {
+    align-items: center;
+    padding-top: 0;
+    height: 100vh;
+  }
 }
