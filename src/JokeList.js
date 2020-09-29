@@ -15,7 +15,7 @@ class JokeList extends Component {
             loading: false
          };
         this.seenJokes = new Set(this.state.jokes.map(j => j.text));
-        console.log(this.seenJokes);
+        // console.log(this.seenJokes);
         this.handleClick = this.handleClick.bind(this);
     }
 
